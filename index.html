@@ -18,11 +18,8 @@
 
     <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
@@ -43,7 +40,8 @@
 	          <li class="nav-item"><a href="treatments.html" class="nav-link">Treatments</a></li>
 			  <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
 			  <li class="nav-item"><a href="afterCare.html".html" class="nav-link">After Care</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+			  <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+			  <div id="SignIn"></div>
 	        </ul>
 	      </div>
 		  </div>
@@ -66,7 +64,7 @@
 	            </div>
 	          </div>
             <p>
-            	<!-- <a href="#" class="btn btn-primary p-3 px-5 py-4 mr-md-2">Get in Touch</a> -->
+            	
             	<a href="contact.html" class="btn btn-outline-primary p-3 px-5 py-4 ml-md-2">Contact</a>
             </p>
           </div>
@@ -554,7 +552,7 @@
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row d-flex">
-          <!-- <div class="col-md">
+          <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Skin &amp; Lash</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -564,7 +562,7 @@
                 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
-          </div> -->
+          </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Popular Links</h2>
@@ -601,19 +599,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="row"> -->
-          <!-- <div class="col-md-12 text-center"> -->
-
-            <!-- <p class="mb-0"> -->
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              <!-- Copyright &copy;<script> -->
-                <!-- document.write(new Date().getFullYear()); -->
-
-              <!-- </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-        </div>
+      
       </div>
 	</footer>
 	<!-- End -->
@@ -623,6 +609,15 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+<!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <!-- Load Babel -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Load our React component. -->
+  <script type="text/babel" src="SignIn.js"></script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -639,7 +634,6 @@
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
   </body>
