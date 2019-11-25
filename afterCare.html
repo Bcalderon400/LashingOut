@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+
     <link rel="stylesheet" href="css/animate.css">
     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -20,16 +21,18 @@
 
     <link rel="stylesheet" href="css/ionicons.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/ACcarousel.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/handlebars-v4.5.3.js"></script>
 	
   </head>
   <body>
+
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>Skin &amp; Lash</a>
@@ -50,7 +53,104 @@
 		  </div>
 	  </nav>
     <!-- END nav -->
+   
+    <section
+      class="hero-wrap hero-wrap-2"
+      style="background-image: url('images/bg_2.jpg');"
+      data-stellar-background-ratio="0.5"
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <div
+          class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
+        >
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-3 bread">After Care</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"><a href="index.html">Home</a></span>
+            
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+  <div id="contentDiv" class="card-deck ">
+   
+</div>
+
+    <script id="product-template" type="text/x-handlebars-template">
+
+      <div class="card">
+        <img src="{{imagePath}}" class="card-img-top" alt="product-image">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+
+    </script>
+
+    <script type="text/javascript">
+
+var i;
+
+var source = $("#product-template").html();
+var template = Handlebars.compile(source);
+    
+
+    var data = {
+      product: [
+       {
+         title: "Lash Detox",
+         description: "Bella’s Lash Detox is a foaming, lightweight, oil-free eyelash extension cleanser that can be used as an add-on service for clients to remove make-up from the eye area..",
+         imagePath: "https://za.bellalash.com/media/catalog/product/cache/1/thumbnail/480x/17f82f742ffe127f42dca9de82fb58b1/l/a/lashdetoxweb4.jpg",
+         price: 15
+       },
+       {
+        title: "Intelliseal",
+         description: "A limited-edition, subtly tinted lip moisturizer that instantly infuses lips with soothing hydration while improving the appearance and volume of lip contours.",
+         imagePath: "https://za.bellalash.com/media/catalog/product/cache/1/thumbnail/480x/17f82f742ffe127f42dca9de82fb58b1/i/n/intellisealweb7.jpg",
+         price: 25
+       },
+       {
+        title: "Essential Kit",
+         description: "The Essential Kit is perfect for resale, increasing lash life and keeping your client’s lashes healthy and full.",
+         imagePath: "https://www.essentialmedtools.com/site/wp-content/uploads/AftercareEssentialKitWEB31.jpg",
+         price: 90
+       },
+       {
+        title: "Mini Aftercare Kit",
+        description: "The Mini Aftercare Kit is the simple way to keep your lashes looking healthy and full. Perfect for client resale.",
+        imagePath: "https://live-bellalash.nyc3.digitaloceanspaces.com/live-bellalash/media/products/BLMACK/gallery/AftercareMiniKitWEB3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TS2CW7KGQ6BOJNYH6BNW%2F20191125%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20191125T024738Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=939e4d86ea90eabdbec288d29a61ea238980cd4ca641dfa4fe616a53f99c5268",
+        price: 49
+      },
+       {
+       title: "Touch Mascara",
+         description: "Phase Two of the Natural Touch Mascara features intelliSeal technology , which increases extension life with fast acting binders while providing a light mascara look.",
+         imagePath: "https://live-bellalash.nyc3.digitaloceanspaces.com/live-bellalash/media/products/BL136/gallery/NaturalTouchWEB2.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TS2CW7KGQ6BOJNYH6BNW%2F20191125%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20191125T020503Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=1f6a20f7c2278d372bae67c5962e138cff39b476aacbfbe488d62e22497484ac",
+         price: 25
+      },
+      {
+        title: "Deep Cleaner",
+        description: "Bella’s moisturizing Deep Cleanser is a thick gel enhanced with vitamins and natural extracts to gently but effectively remove all types of mascaras and any other impurities without damaging the extension adhesives.",
+        imagePath: "https://live-bellalash.nyc3.digitaloceanspaces.com/live-bellalash/media/products/BL06CDCL01/gallery/DeepCleanser15MLWEB1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TS2CW7KGQ6BOJNYH6BNW%2F20191125%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20191125T024257Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d2f958eb95d6e5ab336f8ef84804e250975b170f2534bba587ecbf26df7b6307",
+        price: 15
+      }
+      ]
+    };
+
+for(i = 0; i < data.product.length; i++){
+
+  var html = template(data.product[i]);
+  $("#contentDiv").append(html);
+
+}
+    
+    </script>
 	
 		
 <!-- Footer -->
@@ -114,9 +214,9 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-   
-
-
+ 
+ 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -131,7 +231,7 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+ 
   <script src="js/main.js"></script>
     
   </body>

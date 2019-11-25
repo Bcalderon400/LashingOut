@@ -456,7 +456,7 @@
 	              <li>Approx. 1-2 Hours</li>
 	            </ul>
 <div id="like_button_container" class="btn btn-primary d-block px-2 py-4">Book Now</div>
-	            <!-- <a href="#" class="btn btn-primary d-block px-2 py-4">Book Now</a> -->
+	            <!-- <button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal" data-target="#bookingForm">Book Now</button> -->
 	            </div>
 	          </div>
 	        </div>
@@ -475,7 +475,7 @@
 	              <li>Approx. 2-3 Hours</li>
 	            </ul>
 
-	            <a href="#" class="btn btn-primary d-block px-2 py-4">Book Now</a>
+	            <button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal" data-target="#bookingForm">Book Now</button>
 	            </div>
 	          </div>
 	        </div>
@@ -494,12 +494,40 @@
 	              <li>Approx. 3-4 Hours</li>
 	            </ul>
 
-	            <a href="#" class="btn btn-primary d-block px-2 py-4">Book Now</a>
+				<button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal" data-target="#bookingForm">Book Now</button>
 	            </div>
 	          </div>
 	        </div>
 	      </div>
-      </div>
+	  </div>
+	  
+<!-- Modal -->
+<div class="modal fade" id="bookingForm" tabindex="-1" role="dialog" aria-labelledby="bookingFormTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="bookingFormTitle">Modal title</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+				
+				<form action="connect.php" method="POST">
+					First name:<br>
+					<input type="text" name="firstname" value="Mickey">
+					<br>
+					Last name:<br>
+					<input type="text" name="lastname" value="Mouse">
+					<br><br>
+					<input type="submit" value="Submit">
+				  </form>
+		</div>
+	
+	  </div>
+	</div>
+  </div>
+
 	</section>
 	<!-- End -->
 
@@ -609,15 +637,8 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-<!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-  <!-- Load Babel -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-  <!-- Load our React component. -->
-  <script type="text/babel" src="like_button.js"></script>
+  <!-- handlebars -->
+ <script src="js/handlebars.min-v4.5.3.js"></script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
