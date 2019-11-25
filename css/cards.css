@@ -1,0 +1,9 @@
+.card-title {
+  font-family: "Prata", serif;
+  border-bottom: 1px solid #d9bf77;
+  letter-spacing: 5px;
+}
+.price {
+  font-family: "Prata", serif;
+  font-weight: 600;
+}
