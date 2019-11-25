@@ -24,7 +24,7 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    <!-- <link rel="stylesheet" href="css/ACcarousel.css"> -->
+    <link rel="stylesheet" href="css/ACcarousel.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -74,24 +74,30 @@
         </div>
       </div>
     </section>
-
-  <div id="contentDiv" class="card-deck ">
+<div class="container">
+  <div id="contentDiv" class="card-deck text-center">
    
 </div>
+</div>
+  
 
     <script id="product-template" type="text/x-handlebars-template">
-
-      <div class="card">
-        <img src="{{imagePath}}" class="card-img-top" alt="product-image">
-        <div class="card-body">
-          <h5 class="card-title">{{title}}</h5>
-          <p class="card-text">{{description}}</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-
+     
+       <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card mb-4 w-100">
+                <img src="{{imagePath}}" class="card-img-top img-fluid" alt="product-image">
+                <div class="card-body" style="height: 20rem">
+                  <h5 class="card-title">{{title}}</h5>
+                  <p class="card-text">{{description}}</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+       </div>
+  
+      
+        
     </script>
 
     <script type="text/javascript">
@@ -109,6 +115,18 @@ var template = Handlebars.compile(source);
          description: "Bella’s Lash Detox is a foaming, lightweight, oil-free eyelash extension cleanser that can be used as an add-on service for clients to remove make-up from the eye area..",
          imagePath: "https://za.bellalash.com/media/catalog/product/cache/1/thumbnail/480x/17f82f742ffe127f42dca9de82fb58b1/l/a/lashdetoxweb4.jpg",
          price: 15
+       },
+       {
+         title: "Lash Cleanser",
+         description: "Bella's water-based Lash Cleanser with Make-Up Remover is a light, oil-free eyelash extension cleanser enhanced with vitamins and natural extracts.",
+         imagePath: "https://live-bellalash.nyc3.digitaloceanspaces.com/live-bellalash/media/products/BL06CCLN01/gallery/LashCleanser15MLWEB4.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TS2CW7KGQ6BOJNYH6BNW%2F20191125%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20191125T130219Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6f8ee625ed557d73c67915ffa1e659d0e4ebc596ef32c132d2e9bb2328a602eb",
+         price: 15
+       },
+       {
+        title: "Infinity Lash",
+        description: "Infinity Lash Eyelash Serum, with our exclusive lash-stimulating peptide complex, penetrates the lash line to help lengthen and strengthen natural lashes without the risk of serious side effects.",
+        imagePath: "https://live-bellalash.nyc3.digitaloceanspaces.com/live-bellalash/media/products/BL106/gallery/InfinityLashWEB3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=TS2CW7KGQ6BOJNYH6BNW%2F20191125%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20191125T130042Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=fb95113902f2a61caf1ebc2a9a6e924eaa4465fa6f2da8a385b8f3accd607b2c",
+        price: 35
        },
        {
         title: "Intelliseal",
