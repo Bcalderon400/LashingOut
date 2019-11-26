@@ -25,6 +25,7 @@
 		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
+
 	</head>
 
 	<body>
@@ -676,43 +677,7 @@
 		</footer>
 		<!-- End -->
 
-		<script type="text/babel">
-			class NameForm extends React.Component {
-				constructor(props) {
-					super(props);
-					this.state = { value: '' };
 
-					this.handleChange = this.handleChange.bind(this);
-					this.handleSubmit = this.handleSubmit.bind(this);
-				}
-
-				handleChange(event) {
-					this.setState({ value: event.target.value });
-				}
-
-				handleSubmit(event) {
-					alert('Your Appointment was submitted, please check email for confirmation' + this.state.value);
-					event.preventDefault();
-				}
-
-				render() {
-					return (
-						<form onSubmit={this.handleSubmit}>
-							<label>
-								Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-							</label>
-							<input type="submit" value="Submit" />
-						</form>
-					);
-				}
-			}
-
-			ReactDOM.render(
-				<NameForm />,
-				document.getElementById('reactForm')
-			);
-		</script> -->
 
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
@@ -736,6 +701,7 @@
 		<script src="js/scrollax.min.js"></script>
 
 		<script src="js/main.js"></script>
+		<script src="js/reactForm.js" type="text/babel"></script>
 	</body>
 
 </html>
