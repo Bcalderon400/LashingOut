@@ -3460,6 +3460,7 @@ input[type="button"].btn-block {
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
+  font-family: "Prata", serif;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
@@ -8717,7 +8718,7 @@ h1, h2, h3, h4, h5,
       .card-body ul li span:nth-child(2) {
         width: 30%; }
       .card-body ul li span:last-child {
-        width: 10%; }
+        width: 15%; }
 
 .btn-custom {
   color: #fff;
@@ -8744,7 +8745,7 @@ h1, h2, h3, h4, h5,
   .coach .img {
     height: 380px;
     background-position: top center !important; }
-  .coach .text .subheading {
+  .coach .text . {
     font-size: 13px;
     color: rgba(0, 0, 0, 0.4);
     font-size: 12px;
@@ -8915,7 +8916,18 @@ color: dimgray;
 .heading-section {
   z-index: 0;
  }
-  .heading-section .subheading {
+ .subheading{
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
+  color: #d9bf77;
+  line-height: 1;
+  z-index: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+ }
+  .heading-section {
     font-size: 12px;
     display: block;
     margin-bottom: 5px;

@@ -2,12 +2,11 @@
 <html lang="en">
 
 	<head>
-		<title>Skin &amp; Lash</title>
+		<title>Lashing Out</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-
 		<link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -16,30 +15,30 @@
 		<link rel="stylesheet" href="css/owl.carousel.min.css">
 		<link rel="stylesheet" href="css/owl.theme.default.min.css">
 		<link rel="stylesheet" href="css/magnific-popup.css">
-
 		<link rel="stylesheet" href="css/aos.css">
-
 		<link rel="stylesheet" href="css/ionicons.min.css">
-
-
 		<link rel="stylesheet" href="css/flaticon.css">
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
+
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
 	</head>
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 			<div class="container">
-				<a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>Skin &amp; Lash</a>
+				<a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>Lashing Out</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 					aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="oi oi-menu"></span> Menu
 				</button>
 				<div class="collapse navbar-collapse" id="ftco-nav">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-						<li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+						<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="benefits.html" class="nav-link">benefits</a></li>
 						<li class="nav-item"><a href="treatments.html" class="nav-link">Treatments</a></li>
 						<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
 						<li class="nav-item"><a href="afterCare.html" class="nav-link">After Care</a></li>
@@ -159,7 +158,7 @@
 		</section>
 		<!-- End -->
 
-		<!-- Maybe Keep Services types -->
+		<!-- Services types -->
 		<section class="ftco-section ftco-section-services bg-light">
 			<div class="container-fluid px-md-5">
 				<div class="row">
@@ -170,8 +169,8 @@
 							</div>
 							<div class="text mt-3">
 								<h3>Aromatheraphy</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary
-									regelialia. It is a paradisematic country</p>
+								<p>Holistic healing treatment that uses natural plant extracts to promote health and
+									well-being.</p>
 							</div>
 						</div>
 					</div>
@@ -182,8 +181,8 @@
 							</div>
 							<div class="text mt-3">
 								<h3>Skin Care</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary
-									regelialia. It is a paradisematic country</p>
+								<p>Be nice to your skin! Like the heart , stomach , and brain , your skin is an organ.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -194,8 +193,7 @@
 							</div>
 							<div class="text mt-3">
 								<h3>Herbal Spa</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary
-									regelialia. It is a paradisematic country</p>
+								<p>Handmade fresh herbal treatments include face refresher, scrub, steam, and mask.</p>
 							</div>
 						</div>
 					</div>
@@ -205,9 +203,9 @@
 								<span class="flaticon-relax"></span>
 							</div>
 							<div class="text mt-3">
-								<h3>Body Massage</h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary
-									regelialia. It is a paradisematic country</p>
+								<h3>Relaxation</h3>
+								<p>Place to get into a calm frame of mind before a treatment or enjoy the
+									soporific effects of a great therapy post-treatment.</p>
 							</div>
 						</div>
 					</div>
@@ -495,7 +493,7 @@
 									<li>Approx. 1-2 Hours</li>
 								</ul>
 								<button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
-									data-target="#bookingForm">Book Now</button>
+									data-target="#exampleModalCenter">Book Now</button>
 							</div>
 						</div>
 					</div>
@@ -515,7 +513,7 @@
 								</ul>
 
 								<button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
-									data-target="#bookingForm">Book Now</button>
+									data-target="#exampleModalCenter">Book Now</button>
 							</div>
 						</div>
 					</div>
@@ -534,42 +532,38 @@
 									<li>Approx. 3-4 Hours</li>
 								</ul>
 
+
 								<button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
-									data-target="#bookingForm">Book Now</button>
+									data-target="#exampleModalCenter"> Book Now</button>
+
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
 
-			<!-- Modal -->
-			<div class="modal fade" id="bookingForm" tabindex="-1" role="dialog" aria-labelledby="bookingFormTitle"
-				aria-hidden="true">
-				<div class="modal-dialog modal-dialog-scrollable" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="bookingFormTitle">Modal title</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									...
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div>
+							</div>
 						</div>
-						<div class="modal-body">
-
-							<form action="connect.php" method="POST">
-								First name:<br>
-								<input type="text" name="firstname" value="Mickey">
-								<br>
-								Last name:<br>
-								<input type="text" name="lastname" value="Mouse">
-								<br><br>
-								<input type="submit" value="Submit">
-							</form>
-						</div>
-
 					</div>
+
 				</div>
 			</div>
-
 		</section>
 		<!-- End -->
 
@@ -628,7 +622,7 @@
 				<div class="row d-flex">
 					<div class="col-md">
 						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2">Skin &amp; Lash</h2>
+							<h2 class="ftco-heading-2">Lashing Out</h2>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 								there live the blind texts.</p>
 							<ul class="ftco-footer-social list-unstyled float-lft mt-3">
@@ -653,11 +647,9 @@
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="ftco-heading-2">Quick Links</h2>
 							<ul class="list-unstyled">
-								<li><a href="#">About</a></li>
-								<!-- <li><a href="#">Our Spa</a></li> -->
-								<li><a href="#">Treatments</a></li>
-								<!-- <li><a href="#">Specialists</a></li> -->
-								<li><a href="#">Contact</a></li>
+								<li><a href="#pricing.html">Pricing</a></li>
+								<li><a href="#treatments.html">Treatments</a></li>
+								<li><a href="#contact.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -681,17 +673,57 @@
 			</div>
 		</footer>
 		<!-- End -->
+		<!-- 
+		<script type="text/babel">
+			class Something extends React.Component {
+				render() {
+					state = { show: false }
 
+					showModal = () => {
+						this.setState({ show: true });
+					}
 
+					hideModal = () => {
+						this.setState({ show: false });
+					}
+					return (
+						<div className="something_content">
+							<button>book</button>
+
+							<Modal show={this.state.show} handleClose={this.hideModal} >
+								<p>Modal</p>
+								<p>Data</p>
+							</Modal>
+						</div>
+					)
+				}
+			}
+
+			const Modal = ({ handleClose, show, children }) => {
+				const showHideClassName = show ? 'modal display-block' : 'modal display-none';
+
+				return (
+					<div className={showHideClassName}>
+						<section className='modal-main'>
+							{children}
+							<button
+								onClick={handleClose}
+							>
+								Close
+        </button>
+						</section>
+					</div>
+				);
+			};
+
+			ReactDOM.render(<Something />, document.getElementById('something_container'));
+		</script> -->
 
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 				<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
 				<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 					stroke="#F96D00" /></svg></div>
-
-		<!-- handlebars -->
-		<script src="js/handlebars.min-v4.5.3.js"></script>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -707,10 +739,8 @@
 		<script src="js/bootstrap-datepicker.js"></script>
 		<script src="js/jquery.timepicker.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
-		<script
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-		<script src="js/main.js"></script>
 
+		<script src="js/main.js"></script>
 	</body>
 
 </html>
