@@ -493,7 +493,7 @@
 									<li>Approx. 1-2 Hours</li>
 								</ul>
 								<button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
-									data-target="#exampleModalCenter">Book Now</button>
+									data-target="#bookingModalCenter">Book Now</button>
 							</div>
 						</div>
 					</div>
@@ -513,7 +513,7 @@
 								</ul>
 
 								<button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
-									data-target="#exampleModalCenter">Book Now</button>
+									data-target="#bookingModalCenter">Book Now</button>
 							</div>
 						</div>
 					</div>
@@ -534,26 +534,28 @@
 
 
 								<button type="button" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
-									data-target="#exampleModalCenter"> Book Now</button>
+									data-target="#bookingModalCenter"> Book Now</button>
 
 							</div>
 						</div>
 					</div>
 
 					<!-- Modal -->
-					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal fade" id="bookingModalCenter" tabindex="-1" role="dialog"
+						aria-labelledby="bookingModalCenterTitle" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+									<h5 class="modal-title" id="bookingModalCenterTitle">Modal title</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
+
 								<div class="modal-body">
-									...
+									<div id="reactForm"></div>
 								</div>
+
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 									<button type="button" class="btn btn-primary">Save changes</button>
@@ -673,50 +675,43 @@
 			</div>
 		</footer>
 		<!-- End -->
-		<!-- 
+
 		<script type="text/babel">
-			class Something extends React.Component {
+			class NameForm extends React.Component {
+				constructor(props) {
+					super(props);
+					this.state = { value: '' };
+
+					this.handleChange = this.handleChange.bind(this);
+					this.handleSubmit = this.handleSubmit.bind(this);
+				}
+
+				handleChange(event) {
+					this.setState({ value: event.target.value });
+				}
+
+				handleSubmit(event) {
+					alert('Your Appointment was submitted, please check email for confirmation' + this.state.value);
+					event.preventDefault();
+				}
+
 				render() {
-					state = { show: false }
-
-					showModal = () => {
-						this.setState({ show: true });
-					}
-
-					hideModal = () => {
-						this.setState({ show: false });
-					}
 					return (
-						<div className="something_content">
-							<button>book</button>
-
-							<Modal show={this.state.show} handleClose={this.hideModal} >
-								<p>Modal</p>
-								<p>Data</p>
-							</Modal>
-						</div>
-					)
+						<form onSubmit={this.handleSubmit}>
+							<label>
+								Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+							</label>
+							<input type="submit" value="Submit" />
+						</form>
+					);
 				}
 			}
 
-			const Modal = ({ handleClose, show, children }) => {
-				const showHideClassName = show ? 'modal display-block' : 'modal display-none';
-
-				return (
-					<div className={showHideClassName}>
-						<section className='modal-main'>
-							{children}
-							<button
-								onClick={handleClose}
-							>
-								Close
-        </button>
-						</section>
-					</div>
-				);
-			};
-
-			ReactDOM.render(<Something />, document.getElementById('something_container'));
+			ReactDOM.render(
+				<NameForm />,
+				document.getElementById('reactForm')
+			);
 		</script> -->
 
 		<!-- loader -->
