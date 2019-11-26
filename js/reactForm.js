@@ -18,6 +18,7 @@ class NameForm extends React.Component {
         this.state.value
     );
     event.preventDefault();
+    $(".modal").modal("hide");
   }
 
   render() {
@@ -43,9 +44,3 @@ class NameForm extends React.Component {
 }
 
 ReactDOM.render(<NameForm />, document.getElementById("reactForm"));
-$(".subBtn").on("click", function(event) {
-  // submit form via ajax, then
-
-  event.preventDefault();
-  $(".modal").modal("hide");
-});
