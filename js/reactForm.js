@@ -1,22 +1,4 @@
 "use strict";
-// import DateTimePicker from "react-datetime-picker";
-
-// class Datepicker extends React.Component {
-//   state = {
-//     date: new Date()
-//   };
-
-//   onChange = date => this.setState({ date });
-
-//   render() {
-//     return (
-//       <div>
-//         <DateTimePicker onChange={this.onChange} value={this.state.date} />
-//       </div>
-//     );
-//   }
-// }
-
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -41,28 +23,29 @@ class NameForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <p>First Name: </p>
+        Full Name:
+        <br />
         <input
           type="text"
-          name="First Name"
+          name="Full Name"
           value={this.state.value}
           onChange={this.handleChange}
         />
-        <p>Last Name: </p>
-        <input
-          type="text"
-          name="Last Name"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-        <p>Pick Date and time: </p>
+        <br />
+        Pick Date and time:
         <input type="datetime-local" name="date" />
-        <br />
-        <br />
-        <input type="submit" value="Submit" />
+        Leave a Message:
+        <textarea name="message" cols="30" rows="5"></textarea>
+        <input className="subBtn" type="submit" value="Book" />
       </form>
     );
   }
 }
 
 ReactDOM.render(<NameForm />, document.getElementById("reactForm"));
+$(".subBtn").on("click", function(event) {
+  // submit form via ajax, then
+
+  event.preventDefault();
+  $(".modal").modal("hide");
+});

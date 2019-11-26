@@ -1,0 +1,28 @@
+form {
+  color: #d9bf77;
+}
+.modal {
+  border: 5px solid #d9bf77;
+}
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.lotus-icon {
+  font-size: 50px;
+  color: #d9bf77;
+}
+.modal-title {
+  color: #d9bf77;
+  margin: 0 auto;
+}
+.subBtn {
+  background-color: #fff;
+  padding: 5px 50px;
+  margin-top: 15px;
+  border: none;
+}
+.subBtn:hover {
+  background-color: #d9bf77;
+  color: #fff;
+  transition: 0.5s;
+}
