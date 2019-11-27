@@ -53,3 +53,7 @@ $(function() {
 $(".popover-dismiss").popover({
   trigger: "focus"
 });
+
+$(document).ready(function() {
+  $("#cartModal").modal("show");
+});

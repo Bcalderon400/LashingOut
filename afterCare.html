@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/modal.scss">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/handlebars-v4.5.3.js"></script>
@@ -93,6 +94,7 @@
     </section>
     <!-- End -->
 
+
     <script id="product-template" type="text/x-handlebars-template">
 
        <div class="col-sm-6 col-md-4 col-lg-3">
@@ -104,7 +106,7 @@
                 </div>
                 <div class="card-footer border-0">
                  <p class="price">${{price}}</p>
-                 <button type="button" class="btn btn-primary mr-auto px-3 py-2">Buy Now</button>
+                 <button id="addtocart" type="button" class="btn btn-primary mr-auto px-3 py-2">Add to Cart</button>
                 </div>
               </div>
        </div>
@@ -265,6 +267,7 @@
     <script src="js/scrollax.min.js"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/reactForm.js"></script>
 
   </body>
 
