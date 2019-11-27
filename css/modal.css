@@ -58,9 +58,8 @@ input[type="password"] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #d9bf77;
   color: white;
-  padding: 14px 20px;
+  padding: 1px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -68,6 +67,7 @@ button {
 }
 
 button:hover {
+  background-color: #d9bf77;
   opacity: 0.8;
 }
 
@@ -81,13 +81,15 @@ button:hover {
 /* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
-  margin: 24px 0 12px 0;
+  margin: 20px 0 10px 0;
   position: relative;
 }
 
 img.avatar {
-  width: 40%;
+  width: 30%;
+  background-color: #d9bf77;
   border-radius: 50%;
+  margin-bottom: 50px;
 }
 
 .container-2 {
@@ -113,12 +115,14 @@ span.psw {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
-
+#log {
+  margin-top: 40px;
+}
 /* Modal Content/Box */
 .modal-content-2 {
-  background-color: #fefefe;
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border: 1px solid #d9bf77;
   width: 50%; /* Could be more or less, depending on screen size */
 }
 
