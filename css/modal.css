@@ -1,11 +1,15 @@
 form {
   color: #d9bf77;
 }
+input textarea {
+  border: none;
+}
 .modal {
   border: 5px solid #d9bf77;
 }
 .modal-content {
   background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #d9bf77;
 }
 .lotus-icon {
   font-size: 50px;
@@ -25,4 +29,20 @@ form {
   background-color: #d9bf77;
   color: #fff;
   transition: 0.5s;
+}
+.popover {
+  border: 2px solid #d9bf77;
+  box-shadow: 1px 1px 2px #000;
+}
+.popover-header {
+  background-color: #000;
+  color: #d9bf77;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Prata", serif;
+  border: none;
+}
+.popover-body {
+  background-color: #000;
+  color: white;
 }

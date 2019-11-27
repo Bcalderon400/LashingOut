@@ -28,6 +28,12 @@
 		<link rel="stylesheet" href="css/flaticon.css">
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/modal.css">
+
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
 	</head>
 
 	<body>
@@ -90,7 +96,8 @@
 									<li>Approx. 1-2 Hours</li>
 								</ul>
 
-								<a href="#" class="btn btn-primary d-block px-2 py-4">Book Now</a>
+								<a href="#" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
+									data-target="#bookingModalCenter">Book Now</a>
 							</div>
 						</div>
 					</div>
@@ -109,7 +116,8 @@
 									<li>Approx. 2-3 Hours</li>
 								</ul>
 
-								<a href="#" class="btn btn-primary d-block px-2 py-4">Book Now</a>
+								<a href="#" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
+									data-target="#bookingModalCenter">Book Now</a>
 							</div>
 						</div>
 					</div>
@@ -130,7 +138,8 @@
 									<li>Approx. 3-4 Hours</li>
 								</ul>
 
-								<a href="#" class="btn btn-primary d-block px-2 py-4">Book Now</a>
+								<a href="#" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
+									data-target="#bookingModalCenter">Book Now</a>
 							</div>
 						</div>
 					</div>
@@ -159,12 +168,12 @@
 
 								<ul class="pricing-text mb-5">
 									<li>Face Treatments</li>
-									<li>Nail Treatments</li>
 									<li>Medical Treatments</li>
 									<li>Hair Removal</li>
 								</ul>
 
-								<a href="#" class="btn btn-primary d-block px-2 py-4">Get Started</a>
+								<a href="#" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
+									data-target="#bookingModalCenter">Book Now</a>
 							</div>
 						</div>
 					</div>
@@ -179,12 +188,12 @@
 
 								<ul class="pricing-text mb-5">
 									<li>Face Treatments</li>
-									<li>Nail Treatments</li>
 									<li>Medical Treatments</li>
 									<li>Hair Removal</li>
 								</ul>
 
-								<a href="#" class="btn btn-primary d-block px-2 py-4">Get Started</a>
+								<a href="#" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
+									data-target="#bookingModalCenter">Book Now</a>
 							</div>
 						</div>
 					</div>
@@ -199,12 +208,12 @@
 
 								<ul class="pricing-text mb-5">
 									<li>Face Treatments</li>
-									<li>Nail Treatments</li>
 									<li>Medical Treatments</li>
 									<li>Hair Removal</li>
 								</ul>
 
-								<a href="#" class="btn btn-primary d-block px-2 py-4">Get Started</a>
+								<a href="#" class="btn btn-primary d-block px-2 py-4" data-toggle="modal"
+									data-target="#bookingModalCenter">Book Now</a>
 							</div>
 						</div>
 					</div>
@@ -212,16 +221,40 @@
 			</div>
 		</section>
 		<!-- End -->
+		<!-- Modal -->
+		<div class="modal fade" id="bookingModalCenter" tabindex="-1" role="dialog"
+			aria-labelledby="bookingModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+
+					<div class="modal-header align-items-center ">
+						<div class="col-md-4 ftco-animate text-center">
+							<div class="icon">
+								<span class="flaticon-lotus lotus-icon text-center"></span>
+								<h5 class="modal-title" id="bookingModalCenter">Book your Apointment</h5>
+							</div>
+						</div>
+
+						<div class="modal-body">
+							<div id="reactForm"></div>
+						</div>
 
 
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Footer -->
 		<footer class="ftco-footer ftco-section">
 			<div class="container">
 				<div class="row d-flex">
 					<div class="col-md">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="ftco-heading-2">Lashing Out</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-								there live the blind texts.</p>
+							<p>We enhance your natural beauty based on the foundation of natural and organic
+								elements</p>
 							<ul class="ftco-footer-social list-unstyled float-lft mt-3">
 								<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 								<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -244,9 +277,9 @@
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="ftco-heading-2">Quick Links</h2>
 							<ul class="list-unstyled">
-								<li><a href="#pricing.html">Pricing</a></li>
-								<li><a href="#treatments.html">Treatments</a></li>
-								<li><a href="#contact.html">Contact</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="treatments.html">Treatments</a></li>
+								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -255,9 +288,11 @@
 							<h2 class="ftco-heading-2">Have a Questions?</h2>
 							<div class="block-23 mb-3">
 								<ul>
-									<li><span class="icon icon-map-marker"></span><span class="text">Chico, California,
+									<li><span class="icon icon-map-marker"></span><span class="text">Chico,
+											California,
 											USA</span></li>
-									<li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 530 771
+									<li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 530
+												771
 												5861</span></a></li>
 									<li><a href="#"><span class="icon icon-envelope"></span><span
 												class="text">karencaldeorn1317@gmail.com</span></a></li>
@@ -269,6 +304,8 @@
 
 			</div>
 		</footer>
+		<!-- End -->
+
 
 
 
@@ -295,6 +332,8 @@
 		<script src="js/scrollax.min.js"></script>
 
 		<script src="js/main.js"></script>
+		<script src="js/reactForm.js" type="text/babel"></script>
+
 
 	</body>
 

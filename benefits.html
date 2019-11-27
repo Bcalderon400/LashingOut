@@ -27,8 +27,11 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css">
 
-
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
   </head>
 
@@ -135,36 +138,7 @@
     </section>
     <!-- End  -->
 
-    <!-- Benefits -->
-    <section id="benefits" class="ftco-section ftco-intro"
-      style="background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(images/facial_intro.webp);">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="heading-section ftco-animate">
-              <h2 class="mb-4">Benefits of Doing Facial Treatments</h2>
-            </div>
-            <p class="ftco-animate text-white">Nothing can match the feeling you get when you glide your fingers over
-              your face and feel that soft and milky skin. Most of you follow a daily skin care routine at home. It
-              might not be elaborate, but it at least helps you maintain your skin. But once in a while, it’s good to
-              let the professionals take care of your skin. </p>
-            <ul class="mt-5 do-list">
-              <li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span> Reduce Stress and
-                  Relieve Psychological Distress.</a></li>
-              <li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Gives you and Even
-                  skin tone.</a></li>
-              <li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Boost the
-                  absorption abilities of your skin.</a></li>
-              <li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Promotes Blood
-                  Circulation.</a></li>
-              <li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Treat Acne and
-                  Acne marks.</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End -->
+    <!-- Facial Plans  -->
     <section class="ftco-section ftco-no-pt ftco-no-pb">
       <div class="container">
         <div class="row no-gutters">
@@ -174,10 +148,12 @@
               <div class="text mt-4">
                 <h3 class="mb-4">European Facial</h3>
                 <p class="mb-5">Relax &amp; Rebalance your skin with a custom facial.</p>
-                <p><a href="#">Description</a></p>
+                <a tabindex="0" class="btn btn-lg btn-link mb-3" data-placement="bottom" data-toggle="popover"
+                  data-trigger="focus" title="European Facial"
+                  data-content="Relax & Rebalance your skin with a custom facial. We will discuss your main skin concerns during your complimentary skin analysis and determine if you have dry,oily,acne prone or combination skin type. Also includes facial massage, extractions if needed, facial mask and an optional 2nd facial mask.">Description</a>
 
-                <p><a href="#" class="btn btn-white px-4 py-3"> Book A Treatment <span
-                      class="ion-ios-arrow-round-forward"></span></a></p>
+                <p><a href="#" class="btn btn-white px-4 py-3" data-toggle="modal" data-target="#bookingModalCenter">
+                    Book A Treatment <span class="ion-ios-arrow-round-forward"></span></a></p>
               </div>
             </div>
           </div>
@@ -187,9 +163,13 @@
               <div class="text mt-4">
                 <h3 class="mb-4">Mineral Detox Facial</h3>
                 <p class="mb-5"> For oily, acne prone skin or returning from vacation. </p>
-                <p><a href="#">Description</a></p>
-                <p><a href="#" class="btn btn-white px-4 py-3"> Book A Treatment <span
-                      class="ion-ios-arrow-round-forward"></span></a></p>
+
+                <a tabindex="0" class="btn btn-lg btn-link mb-3" role="button" data-placement="bottom"
+                  data-toggle="popover" data-trigger="focus" title="Mineral Detox"
+                  data-content="Recommended for oily or acne prone skin, arriving or returning from vacation where there's a sudden change in climate/weather, or having a breakout and need to rejuvenate and detox. Extractions and complimentary skin analysis is included.">Description</a>
+
+                <p><a href="#" class="btn btn-white px-4 py-3" data-toggle="modal" data-target="#bookingModalCenter">
+                    Book A Treatment <span class="ion-ios-arrow-round-forward"></span></a></p>
               </div>
             </div>
           </div>
@@ -199,16 +179,19 @@
               <div class="text mt-4">
                 <h3 class="mb-4">Microdermabrasion</h3>
                 <p class="mb-5">For any skin type when you need that extra exfoliating boost.</p>
-                <p><a href="#">Description</a></p>
+                <a tabindex="0" class="btn btn-lg btn-link mb-3" role="button" data-placement="bottom"
+                  data-toggle="popover" data-trigger="focus" title="Microdermabrasion"
+                  data-content="Includes cleansing, mechanical exfoliation of the putter most layer of the skin, moisture and SPF. Recommended for any skin type when you need that extra exfoliating boost or start to notice breakouts. Perfect for on the go or during your lunch break.">Description</a>
 
-                <p><a href="#" class="btn btn-white px-4 py-3"> Book A Treatment <span
-                      class="ion-ios-arrow-round-forward"></span></a></p>
+                <p><a href="#" class="btn btn-white px-4 py-3" data-toggle="modal" data-target="#bookingModalCenter">
+                    Book A Treatment <span class="ion-ios-arrow-round-forward"></span></a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- End -->
 
 
 
@@ -264,8 +247,8 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Lashing Out</h2>
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
+                We enhance your natural beauty based on the foundation of natural and organic
+                elements
               </p>
               <ul class="ftco-footer-social list-unstyled float-lft mt-3">
                 <li class="ftco-animate">
@@ -295,9 +278,9 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Quick Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#pricing.html">Pricing</a></li>
-                <li><a href="#treatments.html">Treatments</a></li>
-                <li><a href="#contact.html">Contact</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -320,33 +303,53 @@
 
       </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="bookingModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="bookingModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
 
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-          stroke="#F96D00" />
-      </svg>
-    </div>
+          <div class="modal-header align-items-center ">
+            <div class="col-md-4 ftco-animate text-center">
+              <div class="icon">
+                <span class="flaticon-lotus lotus-icon text-center"></span>
+                <h5 class="modal-title" id="bookingModalCenter">Book your Apointment</h5>
+              </div>
+            </div>
+
+            <div class="modal-body">
+              <div id="reactForm"></div>
+            </div>
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
+            <!-- loader -->
+            <div id="ftco-loader" class="show fullscreen">
+              <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                  stroke="#F96D00" />
+              </svg>
+            </div>
 
-    <script src="js/main.js"></script>
+
+            <script src="js/jquery.min.js"></script>
+            <script src="js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/jquery.easing.1.3.js"></script>
+            <script src="js/jquery.waypoints.min.js"></script>
+            <script src="js/jquery.stellar.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/jquery.magnific-popup.min.js"></script>
+            <script src="js/aos.js"></script>
+            <script src="js/jquery.animateNumber.min.js"></script>
+            <script src="js/bootstrap-datepicker.js"></script>
+            <script src="js/jquery.timepicker.min.js"></script>
+            <script src="js/scrollax.min.js"></script>
+
+            <script src="js/main.js"></script>
+            <script src="js/reactForm.js" type="text/babel"></script>
+
   </body>
 
 </html>

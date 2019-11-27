@@ -33,6 +33,9 @@ class NameForm extends React.Component {
           onChange={this.handleChange}
         />
         <br />
+        E-mail: <br />
+        <input type="email" name="email" />
+        <br />
         Pick Date and time:
         <input type="datetime-local" name="date" />
         Leave a Message:
@@ -44,3 +47,9 @@ class NameForm extends React.Component {
 }
 
 ReactDOM.render(<NameForm />, document.getElementById("reactForm"));
+$(function() {
+  $('[data-toggle="popover"]').popover();
+});
+$(".popover-dismiss").popover({
+  trigger: "focus"
+});
