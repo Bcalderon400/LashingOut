@@ -40,7 +40,7 @@ class NameForm extends React.Component {
         <input type="datetime-local" name="date" />
         Leave a Message:
         <textarea name="message" cols="30" rows="5"></textarea>
-        <input className="subBtn" type="submit" value="Book" />
+        <input className="subBtn" type="submit" value="submit" />
       </form>
     );
   }
